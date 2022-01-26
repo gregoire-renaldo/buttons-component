@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  margin:80px;
+  margin: 80px;
   height: 100vh;
   width: 100vh;
   flex-wrap: wrap;
@@ -15,15 +15,16 @@ body {
   align-items: center;
 }
 
+a {text-decoration: none;
+}
+
 a.rotating {
-  text-decoration: none;
   color: rgb(182, 20, 20);
   font-family: fantasy;
   font-size: 45px;
   border: 5px solid rgb(182, 20, 20);
   padding: 40px 80px;
   position: relative;
-
   overflow: hidden;
 }
 .rotating:before {
@@ -45,7 +46,6 @@ a.rotating {
 }
 
 a.swipe {
-  text-decoration: none;
   color: rgb(50, 53, 99);
   font-family: cursive;
   font-size: 45px;
@@ -80,7 +80,6 @@ a.cross {
   padding: 40px 80px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  text-decoration: none;
   letter-spacing: 4px;
   border: 5px solid olive;
   color: olive;
@@ -100,7 +99,6 @@ a.cross {
   transform: rotateX(90deg);
   z-index: -1;
 }
-
 .cross:after {
   content: "";
   position: absolute;
@@ -113,11 +111,9 @@ a.cross {
   transform: rotateY(90deg);
   z-index: -1;
 }
-
 .cross:hover::before {
   transform: rotateX(0deg);
 }
-
 .cross:hover::after {
   transform: rotateY(0deg);
 }
@@ -126,7 +122,6 @@ a.cross {
 }
 
 a.stretch {
-  text-decoration: none;
   padding: 40px 80px;
   color: coral;
   border: 3px solid coral;
@@ -144,7 +139,6 @@ a.stretch {
 }
 
 a.replace {
-  text-decoration: none;
   color: rgb(14, 136, 60);
   font-family: "Russo One", sans-serif;
   font-size: 45px;
@@ -175,7 +169,6 @@ a.replace::before {
 }
 
 a.diago-swipe {
-  text-decoration: none;
   font-family: sans-serif;
   font-size: 40px;
   border: 3px solid white;
@@ -204,7 +197,6 @@ a.diago-swipe {
 }
 
 a.layer {
-  text-decoration: none;
   background-color: rgba(11, 11, 54, 0.322);
   padding: 40px 80px;
   border: 2px solid green;
@@ -252,7 +244,6 @@ a.layer {
 }
 
 a.text-scaling {
-  text-decoration: none;
   background-color: turquoise;
   color: rgb(40, 14, 136);
   font-family: sans-serif;
@@ -264,7 +255,6 @@ a.text-scaling {
   /* perspective: 500px; */
   overflow: hidden;
 }
-
 .text-scaling:before {
   content: "Hover Me";
   position: absolute;
@@ -314,7 +304,6 @@ a.text-scaling {
   border-radius: 50% 50% 0 0;
   height: 0%;
 }
-
 .circular-button:hover::before {
   height: 190%;
 
@@ -323,7 +312,6 @@ a.text-scaling {
 
 .layers {
   color: white;
-  text-decoration: none;
   padding: 20px 40px;
   text-transform: uppercase;
   background-color: rgb(114, 33, 33);
@@ -375,7 +363,6 @@ a.text-scaling {
 }
 
 .swipe-left {
-  text-decoration: none;
   padding: 20px 40px;
   border: cadetblue solid 2px;
   font-size: 30px;
@@ -434,7 +421,7 @@ a.text-scaling {
   color: #ff0;
   background-color: transparent;
   font-size: 26px;
-  text-decoration: none;
+
   text-transform: uppercase;
   text-align: center;
   line-height: 80px;
@@ -499,7 +486,6 @@ a.text-scaling {
 .two-backgrounds {
   width: 300px;
   height: 60px;
-  text-decoration: none;
   text-transform: uppercase;
   background-color: transparent;
   text-align: center;
@@ -509,51 +495,50 @@ a.text-scaling {
   letter-spacing: 2px;
   position: relative;
   transition: all 0.2s;
-  color:white;
+  color: white;
 }
 .two-backgrounds::before {
-  content:"";
-  position:absolute ;
-  top:-3px;
-  left:-3px;
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
   width: 100%;
-  height:100%;
+  height: 100%;
   background-color: rgba(7, 138, 190, 0.836);
   z-index: -1;
-  mix-blend-mode:multiply ;
+  mix-blend-mode: multiply;
   transition: all 0.2s;
   transform-origin: top;
 }
-.two-backgrounds::after{
-  content:"";
-  position:absolute ;
-  top:3px;
-  left:3px;
+.two-backgrounds::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
   width: 100%;
-  height:100%;
+  height: 100%;
   background-color: rgba(255, 185, 55, 0.836);
-  z-index:-1;
-  mix-blend-mode:multiply ;
+  z-index: -1;
+  mix-blend-mode: multiply;
 
   transition: all 0.2s;
   transform-origin: bottom;
 }
 .two-backgrounds:hover::before {
-  top:-6px;
-  left:0;
+  top: -6px;
+  left: 0;
   transform: perspective(1000px) rotateX(75deg);
 }
 .two-backgrounds:hover::after {
-  bottom:6px;
-  left:0;
+  bottom: 6px;
+  left: 0;
   transform: perspective(1000px) rotateX(-75deg);
 }
 .two-backgrounds:hover {
-  color:darkgray
+  color: darkgray;
 }
 
 .portal {
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 25px;
   color: #f6b93b;
@@ -561,54 +546,100 @@ a.text-scaling {
   padding: 20px 50px;
   border: 3px solid #f6b93b;
   transition: all 0.5s;
-  position:relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
 }
-.portal::before, .portal::after, .portal span::before, .portal span::after {
-  content:"";
+.portal::before,
+.portal::after,
+.portal span::before,
+.portal span::after {
+  content: "";
   position: absolute;
-  width:25%;
+  width: 25%;
   height: 100%;
   background-color: #f6b93b;
   z-index: -1;
-  transition:all 0.5s;
+  transition: all 0.5s;
 }
-
 .portal::before {
-  top:0;
-  left:-25%;
+  top: 0;
+  left: -25%;
 }
-.portal:hover::before{
-  top:0;
-  left:0%;
+.portal:hover::before {
+  top: 0;
+  left: 0%;
 }
 .portal::after {
-  top:-100%;
-  left:25%;
+  top: -100%;
+  left: 25%;
 }
-.portal:hover::after{
-  top:0;
-  left:25%;
+.portal:hover::after {
+  top: 0;
+  left: 25%;
 }
-
 .portal span::before {
-  top:100%;
-  right:25%;
+  top: 100%;
+  right: 25%;
 }
 .portal:hover span::before {
-  top:0%;
-  right:25%;
+  top: 0%;
+  right: 25%;
 }
-
 .portal span::after {
-  top:0;
-  right:-25%;
+  top: 0;
+  right: -25%;
 }
-.portal:hover span::after{
-  top:0%;
-  right:0%;
+.portal:hover span::after {
+  top: 0%;
+  right: 0%;
 }
 .portal:hover {
-  color:gray;
-  border:2px solid gray
+  color: gray;
+  border: 2px solid gray;
+}
+
+.borders {
+  font-size: 22px;
+  font-family:verdana;
+  letter-spacing: 3px;
+  height: 60px;
+  width:200px;
+  line-height:60px;
+  text-align: center;
+  color: #685810;
+  position:relative;
+  /* border: 2px solid blue; */
+
+
+}
+
+.borders::before {
+  content:"";
+  position: absolute;
+  height: 90px;
+  width:200px;
+  top:-15px;
+  left:0;
+  border-left:2px solid red;
+  border-right: 2px solid #685810;
+   transition: all 0.8s
+}
+.borders::after {
+  content:"";
+  position: absolute;
+  height: 60px;
+  width: 230px;
+  top: 0;
+  left:-15px;
+  border-top:2px solid red;
+  border-bottom: 2px solid #685810;
+  transition: all 0.8s;
+  transition-delay: 0.2s;
+}
+
+.borders:hover::before {
+  transform: rotateY(180deg);
+}
+.borders:hover::after {
+  transform: rotateX(180deg);
 }
