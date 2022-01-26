@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+  margin:80px;
   height: 100vh;
   width: 100vh;
   flex-wrap: wrap;
@@ -334,7 +335,6 @@ a.text-scaling {
   position: relative;
   /* z-index: -1; */
 }
-
 .layers::before {
   content: "before";
   position: absolute;
@@ -383,7 +383,6 @@ a.text-scaling {
   overflow: hidden;
   color: transparent;
 }
-
 .swipe-left::before {
   content: "button";
 
@@ -400,7 +399,6 @@ a.text-scaling {
   align-items: center;
   transition: all 0.9s;
 }
-
 .swipe-left:hover::before {
   left: 100%;
   transform: scale(0) rotateY(360deg);
@@ -443,7 +441,6 @@ a.text-scaling {
   transition: all 0.5s;
   position: relative;
 }
-
 .merging-dots:before,
 .merging-dots:after {
   content: "";
@@ -466,21 +463,19 @@ a.text-scaling {
   right: 0;
   box-shadow: 100px 0 0 #ff0;
 }
-
 .merging-dots:hover:before {
   left: 50%;
   box-shadow: 30px 0 0 #ff0;
   transform: translateX(-50%) translateY(-50%);
   opacity: 1;
 }
-
 .merging-dots:hover:after {
   right: 50%;
   box-shadow: -30px 0 0 #ff0;
   transform: translateX(50%) translateY(-50%);
   opacity: 1;
 }
-span {
+.merging-dots span {
   position: absolute;
   top: 0;
   left: 0;
@@ -543,7 +538,6 @@ span {
   transition: all 0.2s;
   transform-origin: bottom;
 }
-
 .two-backgrounds:hover::before {
   top:-6px;
   left:0;
@@ -558,4 +552,63 @@ span {
   color:darkgray
 }
 
+.portal {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #f6b93b;
+  letter-spacing: 3px;
+  padding: 20px 50px;
+  border: 3px solid #f6b93b;
+  transition: all 0.5s;
+  position:relative;
+  overflow:hidden;
+}
+.portal::before, .portal::after, .portal span::before, .portal span::after {
+  content:"";
+  position: absolute;
+  width:25%;
+  height: 100%;
+  background-color: #f6b93b;
+  z-index: -1;
+  transition:all 0.5s;
+}
 
+.portal::before {
+  top:0;
+  left:-25%;
+}
+.portal:hover::before{
+  top:0;
+  left:0%;
+}
+.portal::after {
+  top:-100%;
+  left:25%;
+}
+.portal:hover::after{
+  top:0;
+  left:25%;
+}
+
+.portal span::before {
+  top:100%;
+  right:25%;
+}
+.portal:hover span::before {
+  top:0%;
+  right:25%;
+}
+
+.portal span::after {
+  top:0;
+  right:-25%;
+}
+.portal:hover span::after{
+  top:0%;
+  right:0%;
+}
+.portal:hover {
+  color:gray;
+  border:2px solid gray
+}
